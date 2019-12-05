@@ -65,21 +65,19 @@
 	var vid = document.querySelector("#myVideo");
 
 
-	function playVid() { 
-		console.log("Play Video");
-		vid.play();
-		document.querySelector('#volume').innerHTML = document.querySelector('#volumerSlider').value; 
-		var buttons = document.getElementById("play");
-
-		// Play the video and update the volume.
-	} 
-
-	function pauseVid() { 
-		console.log("Pause Video");
-		vid.pause();
+	function playVid() {
+		console.log("Play Video")
+		vid.play()
+		var slider = document.getElementById("volumeSlider");
+		output.innerHTML = slider.value + "%";
+		// added the percentage here
+	}
+	function pauseVid() {
+		vid.pause()
+		// forgot to put this in here before so it didn't pause originally
+		console.log("Pause Video")
 	  	// Play the video.
-	} 
-
+	}
 
 	function slowSpeed() {
 		vid.playbackRate = vid.playbackRate / 2;
