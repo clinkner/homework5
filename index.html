@@ -11,16 +11,19 @@
 			width: 90%;
 			border: 1px solid black;
 		}
-
 		/*Use this class to change video color*/
 		.grayscale{
 			filter: grayscale(100%);
 		}
-
+		.play{
+			background: url(./images/play.png) no-repeat;
+		}
+		.pause{
+			background: url(./images/pause.png) no-repeat;
+		}
 		button{
 			margin-bottom: 5px;
 		}
-
 		/*You can not change anything in the style tag other than to add images for the buttons. */
 </style>
 </head>
@@ -67,7 +70,6 @@
 		vid.play();
 		document.querySelector('#volume').innerHTML = document.querySelector('#volumerSlider').value; 
 		var buttons = document.getElementById("play");
-		buttons.innerHTML = '<img src=".../images/playbutton.png"/>';
 
 		// Play the video and update the volume.
 	} 
@@ -78,8 +80,9 @@
 	  	// Play the video.
 	} 
 
+
 	function slowSpeed() {
-		vid.playbackRate = vid.playblackRate / 2;
+		vid.playbackRate = vid.playbackRate / 2;
 		console.log(vid.playbackRate);
 		// Slow the vido speed by half and log the new rate to the console. 
 	} 
